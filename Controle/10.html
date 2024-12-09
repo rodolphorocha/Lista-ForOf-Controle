@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+
+    const candidato1 = prompt(`Insira o nome do candidato 1`);
+    const candidato2 = prompt(`Insira o nome do candidato 2`);
+    const candidato3 = prompt(`Insira o nome do candidato 3`);
+
+    const alunosVotantes = Number(prompt(`Insira o número de alunos na sala que irão votar:`));
+
+    let votosCand1 = 0;
+    let votosCand2 = 0;
+    let votosCand3 = 0;
+
+
+
+    //PROCESSAMENTO
+    for (i = 1; i <= alunosVotantes; i++) {
+        let voto = Number(prompt(`Insira o número do candidato que você deseja votar: 
+        Candidato ${candidato1} (1)   Candidato ${candidato2} (2)    Candidato ${candidato3} (3)`));
+
+        if (voto == 1) {
+            votosCand1++
+        } else if (voto == 2) {
+            votosCand2++
+        } else {
+            votosCand3++
+        }
+    }
+
+
+
+    //SAÍDA
+    document.write(`Votos no total: ${alunosVotantes}<br>
+     Votos no candidato ${candidato1}: ${votosCand1} (${votosCand1*100/alunosVotantes}%)<br>
+     Votos no candidato ${candidato2}: ${votosCand2} (${votosCand2*100/alunosVotantes}%)<br>
+     Votos no candidato ${candidato3}: ${votosCand3} (${votosCand3*100/alunosVotantes}%)`)
+
+</script>
